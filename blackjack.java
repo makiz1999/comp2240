@@ -10,14 +10,14 @@ class Main {
     System.out.println("How many times you would like to play blackjack?");
     numGames = games.nextInt();
     System.out.println("Number of games you would like to play: " + numGames);
-    System.out.printf("\nWELCOME TO THE GAME\n\nRules of blackjack: \nYou and Mr.Computer will get a number from 1 to 21, whoever will get number closer to 21 wins\nIf someone will get number that is bigger than 21 he loses\nIf you both get number bigger than 21 it is tie\n\n");
+    System.out.printf("\nWELCOME TO THE GAME\n\nRules of blackjack: \nYou and Mr.Computer will get a number from 1 to 28, whoever will get number closer to 21 wins\nIf someone will get number that is bigger than 21 he loses\nIf you both get number bigger than 21 it is tie\n\n");
 
     for ( int i = 0; i < numGames; i++){
       System.out.printf("\nGAME NUMBER: %d\n", i+1);
       Random rand = new Random();
-      int you = rand.nextInt(20);
+      int you = rand.nextInt(27);
       you += 1;
-      int comp = rand.nextInt(20);
+      int comp = rand.nextInt(27);
       comp += 1;
       System.out.printf("YOU: %d    MR.COMPUTER:%d\n", you, comp);
       System.out.println(blackjack(you, comp));
